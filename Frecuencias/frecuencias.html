@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+	window.onload = function() {
+		// nota hare de 55 o 60 para ambos lados
+		var base = 440; // 440Hz es la nota La o A
+		var cantidadNotas = 60;
+
+		var arrayFecuencias = new Array();
+
+		//var resultado = calculoArriba(base, 1);
+
+		//.toFixed(3)
+
+		arrayFecuencias.push(base);
+
+		for (var i = 1; i <= cantidadNotas; i++) {
+			arrayFecuencias.push(calculoArriba(base, i).toFixed(3));
+			arrayFecuencias.push(calculoAbajo(base, i).toFixed(3));
+		}
+
+
+		//var arrayPrueba = new Array(90,51,1,54,87,63,25,9,6,56,99,152,150,250,654,8,4,5);
+
+		//Para ordenar de mayor a menor una Array .sort(function (a,b){return b-a;});
+
+		//var resultado = arrayPrueba.sort(function (a,b){return b-a;});
+
+		//alert(arrayFecuencias);
+		for (var i = 0; i < arrayFecuencias.length; i++) {
+			var arrayOrdenada = arrayFecuencias.sort(function (a,b){return b-a;});
+
+			document.getElementById("lista").innerHTML += arrayOrdenada[i]+" Hz <br />";
+
+		
+		}
+
+
+	}
+
+	function calculoArriba(base, posicion){
+		return  base * Math.pow(2, (posicion/12));  //2 elevado a x/12
+
+	}
+
+
+	function calculoAbajo(base, posicion){
+		return  base / Math.pow(2, (posicion/12));
+	}
+
+
+
+		
+		
+	</script>
+
+<div id="lista"></div>
+
+
+
+
+</body>
+</html>
