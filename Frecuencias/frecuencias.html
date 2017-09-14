@@ -5,12 +5,17 @@
 </head>
 <body>
 	<script>
-	window.onload = function() {
-		// nota hare de 55 o 60 para ambos lados
-		var base = 440; // 440Hz es la nota La o A
-		var cantidadNotas = 60;
+	// nota hare de 55 o 60 para ambos lados
+	var base = 440; // 440Hz es la nota La o A
+	var cantidadNotas = 60; // la cantidad de notas original es el valor por 2. 
 
+
+	window.onload = function() {
+		
 		var arrayFecuencias = new Array();
+		//var arrayFecuencias2D = new Array(cantidadNotas*2);
+
+		var arrayNotas = new Array("A","A#/Bb","B","C","C#/Db","D","D#/Eb","E","F","F#/Gb","G","G#/Ab");
 
 		//var resultado = calculoArriba(base, 1);
 
@@ -31,13 +36,61 @@
 		//var resultado = arrayPrueba.sort(function (a,b){return b-a;});
 
 		//alert(arrayFecuencias);
+		var cuantaNotas = 0;
+		var numeroTono = 9;
+		/**
+		*Cosas que hay que modificar si se modifica la variable cantidadNotas:
+		*las variables cuantaNotas y numeroTono 
+		*/
+
+
 		for (var i = 0; i < arrayFecuencias.length; i++) {
 			var arrayOrdenada = arrayFecuencias.sort(function (a,b){return b-a;});
 
-			document.getElementById("lista").innerHTML += arrayOrdenada[i]+" Hz <br />";
+			document.getElementById("lista").innerHTML += i+"||  "+arrayOrdenada[i]+" Hz || Nota:"+arrayNotas[cuantaNotas]+"||"+numeroTono+"  <br />";
+
+
+			if(arrayNotas[cuantaNotas] == "C"){
+				numeroTono--;
+			}
+
+
+
+
+
+
+			if(cuantaNotas == 0 ){
+				cuantaNotas = arrayNotas.length - 1;
+			}else{
+				cuantaNotas--;
+			}
+
+
+
+
+			
 
 		
 		}
+		//arrayToUint8Array([2, 45, 32, 12, 67, 34, 80, 101, 2, 453, 89, 77, 102, 32, 1, 65]), 2048, 44100
+
+		var fourierFastTransformSize = 2048;
+
+		var sampleRate = 44100;
+
+
+
+		var arrayPrueba = new Array(2, 45, 32, 12, 67, 34, 80, 101, 2, 453, 89, 77, 102, 32, 1, 65);
+
+
+		//alert(extractHigherValueFrequency(arrayPrueba, fourierFastTransformSize, sampleRate));
+
+		//extractHigherValueFrequency(arrayPrueba, fourierFastTransformSize, sampleRate);
+
+		alert(calculateFrequency(9, sampleRate, fourierFastTransformSize));
+		
+
+		//alert(noteFromPitch( 329.628 ));
 
 
 	}
@@ -52,6 +105,40 @@
 		return  base / Math.pow(2, (posicion/12));
 	}
 
+
+	//apartir de aqui hay funciones experimentales
+
+	function noteFromPitch( frequency ) {
+		var noteNum = 12 * (Math.log( frequency / 440 )/Math.log(2) );
+		return Math.round( noteNum ) + 69;
+	}
+
+	function extractHigherValueFrequency (frequencyByteData, fourierFastTransformSize, sampleRate) {
+        var higherValue = 0;
+        var higherValueFrequency = 0;
+        //var length = frequencyByteData.length;
+        // Buscar la frecuencia con el valor más alto
+        for(var x=0; x<frequencyByteData.length; x++) {
+
+            var frequency = calculateFrequency(x, sampleRate, fourierFastTransformSize);
+
+            alert("Numero de iteracion: "+x+" frequencyByteData: "+frequencyByteData[x]);
+            alert("Numero de iteracion: "+x+" higherValue: "+higherValue);
+            alert("Numero de iteracion: "+x+" frequency: "+frequency);
+            if (frequencyByteData[x] > higherValue) {
+                higherValue = frequencyByteData[x];
+                higherValueFrequency = frequency;
+            }
+        }
+
+        return higherValueFrequency;
+    };
+
+    function calculateFrequency(position, sampleRate, fourierFastTransformSize) {
+    	var calculo = position * (sampleRate / (fourierFastTransformSize * 2));
+    	//alert(calculo);
+        return calculo;
+    }
 
 
 		
