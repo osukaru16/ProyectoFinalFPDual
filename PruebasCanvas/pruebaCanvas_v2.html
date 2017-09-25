@@ -1,0 +1,23 @@
+<!-- Learn about this code on MDN: https://developer.mozilla.org/es/docs/Web/Guide/HTML/Canvas_tutorial/Basic_usage -->
+
+<html>
+  <head>
+    <title>Canvas tutorial</title>
+    <script type="text/javascript">
+      function draw(){
+        var canvas = document.getElementById('tutorial');
+        if (canvas.getContext){
+          var trabajo = canvas.getContext('2d');
+          trabajo.fillStyle()="#ccc";
+          trabajo.fillRect(150,150,300,300);
+        }
+      }
+    </script>
+    <style type="text/css">
+      canvas { border: 2px solid black; }
+    </style>
+  </head>
+  <body onload="draw();">
+    <canvas id="tutorial" width="150" height="150"></canvas>
+  </body>
+</html>

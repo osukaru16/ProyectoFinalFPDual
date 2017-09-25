@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+
+	<script type="text/javascript">
+	
+ /*
+ window.onload = function(){
+ 	dibujar_cuadro();
+
+}*/
+
+function dibujar_cuadro(){
+	var lienzo = document.getElementById("lienzo");
+	var trabajo = lienzo.getContext("2d"); //Siempre requerida
+	trabajo.fillStyle="#ccc";
+	trabajo.fillRect(50,50,30,30);
+
+
+	trabajo.fillStyle="#aaa";
+	trabajo.fillRect(100,50,30,30);
+}
+
+
+
+
+
+</script>
+</head>
+<body onload="dibujar_cuadro();">
+<canvas id="lienzo" width="3000" height="3000"> </canvas>
+
+
+
+
+</body>
+</html>
