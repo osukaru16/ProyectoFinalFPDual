@@ -87,7 +87,7 @@
 
 		//extractHigherValueFrequency(arrayPrueba, fourierFastTransformSize, sampleRate);
 
-		alert(calculateFrequency(9, sampleRate, fourierFastTransformSize));
+		//alert(calculateFrequency(9, sampleRate, fourierFastTransformSize));
 		
 
 		//alert(noteFromPitch( 329.628 ));
@@ -122,9 +122,9 @@
 
             var frequency = calculateFrequency(x, sampleRate, fourierFastTransformSize);
 
-            alert("Numero de iteracion: "+x+" frequencyByteData: "+frequencyByteData[x]);
-            alert("Numero de iteracion: "+x+" higherValue: "+higherValue);
-            alert("Numero de iteracion: "+x+" frequency: "+frequency);
+            //alert("Numero de iteracion: "+x+" frequencyByteData: "+frequencyByteData[x]);
+            //alert("Numero de iteracion: "+x+" higherValue: "+higherValue);
+            //alert("Numero de iteracion: "+x+" frequency: "+frequency);
             if (frequencyByteData[x] > higherValue) {
                 higherValue = frequencyByteData[x];
                 higherValueFrequency = frequency;
