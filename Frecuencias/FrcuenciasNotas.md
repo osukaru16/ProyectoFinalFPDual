@@ -1,1 +1,1 @@
-Las nota en Hz usando de base 440Hz
+Las nota en Hz usando de base A 440Hz
