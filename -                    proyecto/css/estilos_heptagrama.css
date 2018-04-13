@@ -21,7 +21,7 @@ line{
 circle{
 
 	stroke-width:1;
-	stroke:white;
+	/*stroke:white;*/
 
 
 
@@ -35,13 +35,14 @@ rect{
 
 }
 
+/*
 text{
 
-	fill:white;
+	
 	font-size: 30px
 
 }
-
+*/
 
 
 
