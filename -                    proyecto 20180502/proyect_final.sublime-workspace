@@ -1,0 +1,452 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"f",
+				"float"
+			],
+			[
+				"a",
+				"auto"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"op",
+				"option\tTag"
+			],
+			[
+				"i",
+				"if\tif"
+			],
+			[
+				"fo",
+				"for\tfor (…) {…}"
+			],
+			[
+				"for",
+				"for\tfor (…) {…}"
+			],
+			[
+				"va",
+				"value"
+			],
+			[
+				"v",
+				"valor"
+			],
+			[
+				"get",
+				"getElementById"
+			],
+			[
+				"t",
+				"texto"
+			],
+			[
+				"in",
+				"input\tTag"
+			],
+			[
+				"al",
+				"alert"
+			],
+			[
+				"te",
+				"textarea\tTag"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"l",
+				"label\tTag"
+			],
+			[
+				"longi",
+				"longitudArray"
+			],
+			[
+				"h",
+				"hidden\tAttr"
+			],
+			[
+				"array_",
+				"array_search"
+			],
+			[
+				"arr",
+				"array_replace"
+			],
+			[
+				"array_re",
+				"array_merge"
+			],
+			[
+				"c",
+				"contador"
+			],
+			[
+				"co",
+				"count"
+			],
+			[
+				"li",
+				"libre"
+			],
+			[
+				"em",
+				"email"
+			],
+			[
+				"pas",
+				"password"
+			],
+			[
+				"com",
+				"comprobar"
+			],
+			[
+				"pu",
+				"public"
+			],
+			[
+				"pa",
+				"password"
+			],
+			[
+				"fu",
+				"function"
+			],
+			[
+				"cone",
+				"conectarBD"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"di",
+				"div\tTag"
+			],
+			[
+				"__",
+				"__direccion"
+			],
+			[
+				"g",
+				"getApellido"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+	],
+	"file_history":
+	[
+		"/K/Total Des T/- anime/Ver Kikou Shoujo wa Kizutsukanai( Machine Doll) 02 _ Descargar Kikou Shoujo wa Kizutsukanai( Machine Doll) 02 Gratis.htm",
+		"/H/TorrentAchivo/passwords.txt",
+		"/R/- Prototipo_DIW/PrototipoVoodo/css/pc.css",
+		"/R/- Prototipo_DIW/PrototipoVoodo/index.html",
+		"/C/Users/oodo/Desktop/Dual 2any/pbd144.db",
+		"/C/Users/oodo/Desktop/Dual 2any/dato ajax/ajax (7).js",
+		"/C/Users/oodo/Desktop/Dual 2any/Practica11/Practica11/Ejercicio1/lib/app.js",
+		"/C/Users/oodo/Desktop/Dual 2any/Practica11/Practica11/Ejercicio1/lib/appv2.js",
+		"/C/Users/oodo/Desktop/Dual 2any/Practica11/Practica11/Ejercicio1/index.html",
+		"/R/- urbina/ExamenXML-master/ExamenXML-master/V3/ProyectoExamenXML/js/js.js",
+		"/R/- Ejercicios Navidad DWEC/Tema5/Ejercicio2 hecho/js/t5e2.js",
+		"/R/- JSTema_12/AJAX_samples-20180203T221111Z-001/AJAX_samples/CLIENT/ajax07.html",
+		"/R/- JSTema_12/ej2/index.html",
+		"/R/- JSTema_12/AJAX_samples-20180203T221111Z-001/AJAX_samples/CLIENT/ajax01.html",
+		"/R/- JSTema_12/ej1/index.html",
+		"/R/- JSTema_12/AJAX_samples-20180203T221111Z-001/AJAX_samples/CLIENT/ajax02.html",
+		"/R/- JSTema_12/AJAX_samples-20180203T221111Z-001/AJAX_samples/SERVIDOR/DWEC_P12_01.php",
+		"/E/# Datos Surface/Todo N/() Datos Surface/NetBeans 8.2/php/phpstubs/phpruntime/soap.php",
+		"/I/Estudios/Lenguages de programacion/Revista de  programacion/SP164/APLICACIONES WEB CON AJAX 2/www.revistasprofesionales.com/html/js/CROSS-~1.JS",
+		"/I/Todo HTC Desire/fastboot/htc/htctuto1_files/smnlikquick_ajax.js",
+		"/C/Users/oodo/Desktop/Dual 2any/- Codigo fuente github/Pentamerone Game Ver1.1 js/rpg_objects.js",
+		"/R/- Codigos fuentes/Pentamerone Game Ver1.1 js/rpg_core.js",
+		"/C/Users/oodo/Desktop/Dual 2any/PHP/Pract jos/practicafinal/listado.php",
+		"/C/Users/oodo/Desktop/Dual 2any/- Ejercicios Navidad DWEC/DWEC_P05-20171221T151923Z-001/DWEC_P05/DWEC_P05_502V1/js/t5e2.js",
+		"/C/Users/oodo/Desktop/Dual 2any/EjNavidadJamal/EntornoCliente-master/EntornoCliente-master/Practica 5/Ejercicio3/index.html",
+		"/C/Users/oodo/Desktop/Dual 2any/PHP/MIMPI v4/total/phpbdv2/kon.php",
+		"/C/Users/oodo/Desktop/Dual 2any/PHP/Pract jos/practicafinal/detalls.php",
+		"/C/Users/oodo/Desktop/Dual 2any/PHP/Pract jos/practicafinal/entrada.php",
+		"/C/Users/oodo/Desktop/Dual 2any/PHP/Pract jos/practicafinal/modifica.php",
+		"/C/Users/oodo/Desktop/Dual 2any/- Codigo fuente github/Pentamerone Game Ver1.1/www/js - copia/main.js",
+		"/C/Users/oodo/Downloads/adventures-in-math/adventures-in-math/CASTLE.BAS",
+		"/R/- Ejercicios Navidad DWEC/Tema6/Ejercicio3/index.html",
+		"/R/- JS T10/Ej10/js/script.js",
+		"/R/- JS T10/Ej10/js/creaTabla.js",
+		"/R/- JS T10/Ej10/css/estilo.css",
+		"/R/- JS T10/Ej10/index.html",
+		"/C/Users/oodo/Desktop/Dual 2any/PHP/Pract jos/practicafinal/conexion.php",
+		"/I/foro/index.php",
+		"/C/Users/oodo/Downloads/adventures-in-math/adventures-in-math/ADVENTUR.BAS",
+		"/R/- Ejercicios Navidad DWEC/Tema6/Ejercicio3/js/js.js",
+		"/R/- Ejercicios Navidad DWEC/Tema6/Ejercicio2 hecho/js/js.js",
+		"/R/- Ejercicios Navidad DWEC/Tema6/Ejercicio2/js/js.js",
+		"/R/- Ejercicios Navidad DWEC/Tema6/Ejercicio2/index.html",
+		"/R/- Ejercicios Navidad DWEC/Tema6/Ejercicio1 hecho/index.html",
+		"/C/Users/oodo/Desktop/Dual 2any/codigoEroge.txt",
+		"/R/- Ejercicios Navidad DWEC/Tema6/Ejercicio1/js/js.js",
+		"/R/- Ejercicios Navidad DWEC/Tema6/Ejercicio1/index.html",
+		"/H/TorrentAchivo/(同人ゲーム) [160309][RJ170000][Luwen Workshop] ペンタメロン・ゲーム ―Pentamerone Game― Ver.1.1 (files)/Pentamerone Game Ver1.1/www/js/rpg_core.js",
+		"/R/xampp/htdocs/ejbd/actualizar.php",
+		"/R/xampp/htdocs/ejbd/editar.php",
+		"/R/xampp/htdocs/ejbd/listado.php",
+		"/R/#   Ejercicios DWCLI/Tema_4/4.1.html",
+		"/C/Users/oodo/AppData/Local/Temp/Rar$DIa0.072/conexion.php",
+		"/R/xampp/htdocs/agenda/dominguez_osso_oscar_C2P03/agendaV2.php",
+		"/R/#   TrabajoPhp/Dominguez_Osso_Oscar_C2P02_ordenacion/index.php",
+		"/R/#  DWES/2any/quicksort/quicksort 1/quicksort.php",
+		"/C/xampp/htdocs/2any/clasePhp/arraysAleatorias.php",
+		"/C/xampp/htdocs/2any/clasePhp/ordenarArraysV3.php",
+		"/R/#    desc surface/clasePhp/variablesGlobales.php",
+		"/C/xampp/htdocs/cotxox/prueba3.php",
+		"/C/xampp/htdocs/cotxox/prueba5.php",
+		"/C/xampp/htdocs/clasePhp/ordenarArraysV2.php",
+		"/C/Users/oodo/Desktop/ProyectosClase/# Python/hey.py",
+		"/C/xampp/htdocs/2any/Clase JS/Tema2/Ej13.html",
+		"/C/xampp/htdocs/pdo/pdo-master/modelos/Personaje.php",
+		"/C/xampp/htdocs/cotxox/prueba4.php",
+		"/C/xampp/htdocs/clasePhp/ordenarArraysV4.php",
+		"/C/xampp/htdocs/clasePhp/ordenarArraysV3.php",
+		"/E/# Mangas RAW para 3T7/(一般小説) [鎌池和馬] とある魔術の禁書目録 第01-22巻+SS+SS2 (青空文庫txt形式 挿絵付き)/01卷/[鎌池和馬] とある魔術の禁書目録 第01巻.html",
+		"/C/xampp/htdocs/clasePhp/ordenarArrays.php",
+		"/C/Users/oodo/Desktop/ProyectosClase/# Proyecto Coxtxox/Cotxox_PHPV3/cotxox/php/modelos/Conductor.php",
+		"/C/Users/oodo/Desktop/ProyectosClase/# Proyecto Coxtxox/ProyectoCotxox/src/main/java/org/proyecto/cotxox/bd/Conductor.java",
+		"/C/Users/oodo/Desktop/ProyectosClase/# Proyecto Coxtxox/Cotxox_PHPV3/cotxox/php/modelos/Conductor_Antiguo.php",
+		"/C/Users/oodo/Desktop/ProyectosClase/# Proyecto Coxtxox/Cotxox_PHPV3/cotxox/php/modelos/Usuario.php",
+		"/C/xampp/htdocs/Foro/index.php",
+		"/C/Users/oodo/Desktop/ProyectosClase/# Proyecto Coxtxox/ProyectoCotxox/src/main/java/org/proyecto/cotxox/bd/Usuario.java",
+		"/C/xampp/htdocs/cotxox/Usuario.php",
+		"/C/xampp/htdocs/pdo/pdo-master/index.php",
+		"/C/xampp/htdocs/pdo/pdo-master/vistas/index.php",
+		"/C/xampp/htdocs/pdo/pdo-master/vistas/guardar_personaje.php",
+		"/C/xampp/htdocs/pdo/pdo-master/modelos/Conexion.php",
+		"/C/xampp/htdocs/cotxox/Conexion.php",
+		"/C/Users/oodo/Desktop/ProyectosClase/# Proyecto Coxtxox/Cotxox_PHP/cotxox/php/BD.php",
+		"/C/xampp/htdocs/cotxox/php/BD.php",
+		"/C/xampp/htdocs/cotxox/index.php",
+		"/C/xampp/htdocs/cotxox/php/conexion.php",
+		"/C/xampp/htdocs/cotxox/prueba2.php",
+		"/C/xampp/htdocs/Foro/insertar.php",
+		"/C/xampp/htdocs/Foro/registro_de_usuario.php",
+		"/C/xampp/htdocs/pdo/pdo-master/guardar_personaje.php",
+		"/C/xampp/htdocs/pdo/pdo-master/README.md",
+		"/C/xampp/htdocs/cotxox/prueba.php",
+		"/C/xampp/htdocs/Foro/registrarse.php",
+		"/C/xampp/htdocs/cotxox/php/registrar.php",
+		"/C/xampp/htdocs/cotxox/php/registrarse.php",
+		"/K/USB Sergio 20170610/Sergio/htdocs/mysql/Actualizar_registros/act_depart.php",
+		"/K/Estudios 20131003/Lenguages de programacion/PHP/Pract jos/practicafinal/conexion.php",
+		"/C/Users/oodo/Desktop/ProyectosClase/# Proyecto Coxtxox/Cotxox_PHP/PHPGoogleMaps-master/PHPGoogleMaps-master/Core/MapObject.php",
+		"/C/Users/oodo/Desktop/ProyectosClase/# Proyecto Coxtxox/Cotxox_PHP/PHPGoogleMaps-master/PHPGoogleMaps-master/Core/StaticMapObject.php",
+		"/C/Users/oodo/Desktop/ProyectosClase/# Proyecto Coxtxox/Cotxox_PHP/maps-master/maps-master/php/conexao.php",
+		"/K/Estudios 20131003/Lenguages de programacion/PHP/MIMPI v4/total/sito web acabado/phpbd/bd.php",
+		"/C/xampp/htdocs/cotxox/php/insertar_usuario.php",
+		"/C/xampp/htdocs/cotxox/php/iniciar.php",
+		"/C/xampp/htdocs/cotxox/php/insertar.php",
+		"/K/USB Sergio 20170610/Sergio/htdocs/mysql/Insertar_registros/insert_depart.php",
+		"/K/USB Sergio 20170610/Sergio/htdocs/mysql/Insertar_registros/index.php",
+		"/C/Users/oodo/Desktop/ProyectosClase/# Proyecto Coxtxox/CotxoxFront/js/js.js",
+		"/C/Users/oodo/Desktop/ProyectosClase/# Proyecto Coxtxox/CotxoxFront/css/pc.css",
+		"/C/Users/oodo/Desktop/ProyectosClase/# Proyecto Coxtxox/CotxoxFront/css/movil.css",
+		"/C/Users/oodo/Desktop/ProyectosClase/# Proyecto Coxtxox/CotxoxFront/index.html",
+		"/C/Users/oodo/Desktop/ProyectosClase/#  ProyectoNoticias/pagina_noticias/noticias/noticia4.html",
+		"/C/Users/oodo/Desktop/ProyectosClase/#  ProyectoNoticias/pagina_noticias/noticias/noticia3.html",
+		"/C/Users/oodo/Desktop/ProyectosClase/#  ProyectoNoticias/pagina_noticias/rss/rss.xml",
+		"/C/Users/oodo/Desktop/ProyectosClase/#  ProyectoNoticias/pagina_noticias/noticias/noticia1.html",
+		"/C/Users/oodo/Desktop/ProyectosClase/#  ProyectoNoticias/pagina_noticias/js/js.js",
+		"/C/Users/oodo/Desktop/ProyectosClase/#  ProyectoNoticias/pagina_noticias/index.html",
+		"/C/Users/oodo/Desktop/ProyectosClase/#  ProyectoNoticias/pagina_noticias/css/pc.css",
+		"/C/Users/oodo/Desktop/ProyectosClase/#  ProyectoNoticias/pagina_noticias/noticias/noticia2.html",
+		"/C/Users/oodo/Desktop/ProyectosClase/#  ProyectoNoticias/pagina_noticias/css/movil.css",
+		"/E/ReCore.PC/Info/Info/Scarica la password.html",
+		"/C/Users/oodo/Desktop/ProyectosClase/#  ProyectoNoticias/fracmento.js",
+		"/C/Users/oodo/Desktop/Programacion ejercicios/eqSegGrado.py",
+		"/C/Users/oodo/Desktop/Python_codigo/Ejercicios POO/Ejercicios_POO.py",
+		"/C/Users/oodo/Desktop/Programacion ejercicios/matrizIdentidad.py",
+		"/C/Users/oodo/Desktop/Python_codigo/Prueba.py"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"electroanime",
+			"pass",
+			"passo",
+			"passow",
+			"passowrd",
+			"passowrd:",
+			"pass",
+			"migas",
+			";\n",
+			"mayuscula",
+			"'",
+			"$x",
+			"pintaArray",
+			"nickname"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"\"",
+			"user"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "proyect_final.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 239.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
