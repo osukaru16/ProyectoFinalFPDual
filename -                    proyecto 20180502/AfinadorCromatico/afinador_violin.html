@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>pruebas</title>
+</head>
+<script type="text/javascript">
+	var audioContext = new AudioContext();
+	var osc = null;
+	//var options = {	start: true };
+	//var needsReset = true;
+	//var pitchDetector = null;
+	//var theBuffer = null;
+	//window.AudioContext = window.AudioContext || window.webkitAudioContext;
+
+
+
+
+window.playNote = function playNote(freq){
+		stopNote();
+		osc = audioContext.createOscillator();
+		osc.connect(audioContext.destination);
+		osc.frequency.value = freq;
+		osc.start(0);
+	};
+
+window.stopNote = function stopNote(){
+		if(osc) {
+			osc.stop();
+			osc.disconnect();
+			osc = null;
+		}
+	};
+
+
+
+
+</script>
+<body>
+
+<button onclick="playNote(195.998);"> G3</button>
+<button onclick="playNote(293.665);"> D4</button>
+<button onclick="playNote(440);"> A4</button>
+<button onclick="playNote(659.255);"> E5</button>
+<button onclick="stopNote();"> stop</button>
+
+</body>
+</html>
