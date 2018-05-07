@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+<body>
+
+
+<div id="anime-demo">
+  <div class="square blue"></div>
+</div>
+
+<div class="controls">
+	<button class="play-scale">Animate Scaling</button>
+	<button class="play-translate">Animate Translation</button>
+	<button class="play-rotate">Animate Rotation</button>
+	<button class="play-all">Animate All Properties</button>
+</div>
+
+
+
+</body>
+
+
+<script src="js/anime.min.js"></script>
+
+
+<script type="text/javascript">
+	
+	var animateScaling = anime({
+	  targets: '.square',
+	  scale: 0.8,
+	  autoplay: false
+	});
+
+
+	var animateTranslation = anime({
+	  targets: '.square',
+	  translateX: window.innerWidth*0.8,
+	  autoplay: false
+	});
+
+	var animateRotation = anime({
+	  targets: '.square',
+	  rotate: '1turn',
+	  autoplay: false
+	});
+
+	var animateAll = anime({
+	  targets: '.square',
+	  scale: 0.8,
+	  translateX: window.innerWidth*0.8,
+	  rotate: '1turn',
+	  autoplay: false
+	});
+
+	document.querySelector('.play-scale').onclick = animateScaling.restart;
+
+	document.querySelector('.play-translate').onclick = animateTranslation.restart;
+
+	document.querySelector('.play-rotate').onclick = animateRotation.restart;
+
+	document.querySelector('.play-all').onclick = animateAll.restart;
+
+</script>
+
+
+
+
+
+
+
+</html>
