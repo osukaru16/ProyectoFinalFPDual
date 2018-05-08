@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>prueba 2</title>
+</head>
+<script type="text/javascript">/*
+	var audioContext = new AudioContext();
+	var osc = null;
+	var options = {	start: true };
+	var needsReset = true;
+	var pitchDetector = null;
+	var theBuffer = null;
+	window.AudioContext = window.AudioContext || window.webkitAudioContext;
+
+
+
+window.onload = function(){
+
+//var AudioContext = window.AudioContext || window.webkitAudioContext;
+var audioCtx = new AudioContext();
+// Older webkit/blink browsers require a prefix
+
+MAX_SIZE = Math.max(4,Math.floor(audioCtx.sampleRate/5000));
+
+
+
+
+
+//alert(audioCtx.sampleRate);
+//console.log(audioCtx.sampleRate);
+
+
+//alert(MAX_SIZE);
+//console.log(MAX_SIZE);
+
+
+
+
+}
+
+window.playNote = function playNote(freq){
+		stopNote();
+		osc = audioContext.createOscillator();
+		osc.connect(audioContext.destination);
+		osc.frequency.value = freq;
+		osc.start(0);
+	};
+
+window.stopNote = function stopNote(){
+		if(osc) {
+			osc.stop();
+			osc.disconnect();
+			osc = null;
+		}
+	};
+
+
+window.stop = function stop(){
+		if(pitchDetector) pitchDetector.destroy();
+		pitchDetector = null;
+	};
+*/
+
+function prueba1(){
+	return "prueba1";
+}
+
+
+
+
+
+
+
+</script>
+<body>
+<button onclick="alert(prueba1);"> prueba1</button>
+<button onclick="alert(prueba1());"> prueba1()</button>
+
+<!--
+<button onclick="playNote(880);"> 880</button>
+<button onclick="stopNote();"> stop</button>
+-->
+</body>
+</html>
