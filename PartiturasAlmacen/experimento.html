@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<script type="text/javascript" src="./js/MidiConvert.js"></script>
+</head>
+
+<body>
+
+<select id="mySelect" onchange="myFunction()">
+  <option value="0" selected>Elige una música
+  <option value="/midis/exp.midi">exp
+</select>
+
+<!--<input type="file" onchange="prueba(this)">-->
+
+<object  id="musica" data="/midis/exp.midi"></object>
+
+
+<button onclick="prueba();">aaaaaaaaa</button>
+
+	<div id="resultado"></div>
+
+
+
+
+
+</body>
+
+<script type="text/javascript">
+	
+
+function prueba(){
+
+	var fileu = document.getElementById("musica").data;
+
+	var file = new File(fileu);
+
+
+	alert(file);
+}
+
+
+</script>
+</html>
