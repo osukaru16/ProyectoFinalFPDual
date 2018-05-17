@@ -5,6 +5,7 @@
 	<script type="text/javascript" src="js/MidiConvert.js"></script>
 	<script type="text/javascript" src="js/conversorMidiJsonRAW.js"></script>
 	<script type="text/javascript" src="js/PartituraJson.js"></script>
+	<script type="text/javascript" src="js/Frecuencias.js"></script>
 	
 </head>
 <body>
@@ -22,8 +23,21 @@
 
 	<button onclick="crearPartituraJson();"> Prueba </button>
 
+	<button onclick="musicBox();"  id="musicBox"> cajademusica </button>
+
+	<button onclick="stopNote();" id="stopNote"> Stop </button>
+
+	<button onclick="reiniciar();" id="stopNote"> Reiniciar </button>
+
 	
 	<script type="text/javascript">
+	var audioContext;
+
+	window.onload = function(){
+		
+		document.getElementById("musicBox").disabled = true;
+		document.getElementById("stopNote").disabled = true;
+	}
 
 		
 
@@ -35,7 +49,7 @@
 		
 	});
 
-
+	var partitura;
 
 	function crearPartituraJson(){
 
@@ -69,11 +83,16 @@
 		//alert(partituraJson.creaPartitura()[0];
 		//var partitura = partituraJson.creaPartitura();
 
-		var partitura = partituraJson.creaPartitura();
+		partitura = partituraJson.getPartitura();
+
+		var titulo = partituraJson.getTitulo();
 		//alert(partitura[0]);
 
-		document.querySelector("#ResultsText2").value = partitura;
+		document.querySelector("#ResultsText2").value = titulo+"  "+partitura;
 
+		document.getElementById("musicBox").disabled = false;
+		document.getElementById("stopNote").disabled = false;
+		audioContext = new AudioContext();
 
 
 
@@ -90,8 +109,71 @@
 	}
 
 
+var peine = 0;
+var frecuencias;
+var osc = null;
+
+	function musicBox(){
+		frecuencias = new Frecuencias();
+
+		playNote(extraerFrecuencia(partitura[peine]));
+		peine++;
+
+		//console.log(frecuencias.getArrayNotaFrecuenciaTono());
+
+		//alert(extraerFrecuencia("G#3"));
 
 
+
+	}
+
+
+function reiniciar(){
+	peine = 0;
+}
+
+
+function extraerFrecuencia(notaTono){
+
+	var nota;
+	var tono;
+
+	var arrayNotaFrecuenciaTono = frecuencias.getArrayNotaFrecuenciaTono();
+
+	if (notaTono.length == 3) {
+		nota = notaTono.charAt(0)+notaTono.charAt(1);
+		tono = notaTono.charAt(2);
+	}else if(notaTono.length == 2) {
+		nota = notaTono.charAt(0);
+		tono = notaTono.charAt(1);
+	}
+
+	for (var i = 0; i < arrayNotaFrecuenciaTono.length; i++) {
+		if((arrayNotaFrecuenciaTono[i][0] == nota)&&(arrayNotaFrecuenciaTono[i][2] == tono)){
+			return arrayNotaFrecuenciaTono[i][1];
+		}
+	}
+	//alert(nota);
+
+}
+
+
+
+window.playNote = function playNote(freq){
+		stopNote();
+		osc = audioContext.createOscillator();
+		osc.connect(audioContext.destination);
+		osc.frequency.value = freq;
+		osc.start(0);
+	};
+
+window.stopNote = function stopNote(){
+		if(osc) {
+			osc.stop();
+			osc.disconnect();
+			osc = null;
+		}
+	};
 
 
 

@@ -12,6 +12,8 @@ function PartituraJson(jsonRawString){
 
 	this.arrayObjectNotas;
 
+	this.titulo;
+
 
 
 	//rawJson.tracks[1].notes
@@ -22,12 +24,22 @@ function PartituraJson(jsonRawString){
 }
 
 
-/*
-PartituraJson.prototype.getJsonRaw = function(){
+PartituraJson.prototype.getTitulo = function(){
 
-	return this.jsonRaw;
+	this.buscaTitulo();
 
-}*/
+	return this.titulo;
+
+}
+
+
+PartituraJson.prototype.getPartitura = function(){
+
+	this.buscaPartitura();
+
+	return this.partitura;
+
+}
 
 PartituraJson.prototype.getJsonRaw = function(){
 
@@ -59,8 +71,18 @@ PartituraJson.prototype.arrayNotas = function(){
 
 }
 
+PartituraJson.prototype.buscaTitulo = function(){
 
-PartituraJson.prototype.creaPartitura = function(){
+	this.titulo = this.jsonRaw.tracks[0].name;
+
+}
+
+
+
+
+
+
+PartituraJson.prototype.buscaPartitura = function(){
 
 	this.arrayNotas();
 
@@ -77,7 +99,7 @@ PartituraJson.prototype.creaPartitura = function(){
 
 	}
 
-	return this.partitura;
+	//return this.partitura;
 
 
 }
