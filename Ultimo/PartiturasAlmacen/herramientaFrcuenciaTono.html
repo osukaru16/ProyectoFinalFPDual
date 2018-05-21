@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Herramienta Frecuencia Tono</title>
+
+	
+</head>
+<body>
+
+	<label>Frecuencia</label>
+	<input type="text" id="frecuenciaText">
+
+	<button onclick="sonarFrecuencia();"> Sonido </button>
+
+	<button onclick="stopNote();"> Pause </button>
+
+
+	
+	<script type="text/javascript">
+	var audioContext;
+	var osc = null;
+
+
+function sonarFrecuencia(){
+
+	audioContext = new AudioContext();
+	
+	var frecuencia = document.getElementById("frecuenciaText").value;
+
+	playNote(frecuencia);
+
+}
+
+
+
+window.playNote = function playNote(freq){
+		stopNote();
+		osc = audioContext.createOscillator();
+		osc.connect(audioContext.destination);
+		osc.frequency.value = freq;
+		osc.start(0);
+	};
+
+window.stopNote = function stopNote(){
+		if(osc) {
+			osc.stop();
+			osc.disconnect();
+			osc = null;
+		}
+	};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+
+</body>
+</html>

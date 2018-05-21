@@ -56,7 +56,7 @@ function extraerFrecuencia(notaTono){
 
 
 window.playNote = function playNote(freq){
-	iniciarAudioContext();
+	//iniciarAudioContext();
 	stopNote();
 	osc = audioContext.createOscillator();
 	osc.connect(audioContext.destination);
