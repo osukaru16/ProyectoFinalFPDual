@@ -1,0 +1,6 @@
+"{musicas:{
+{titulo:'blabla', partitura:[A#5,B7]}, 
+{titulo:'blabla', partitura:[A#5,B7]}, 
+{titulo:'blabla', partitura:[A#5,B7]}, 
+{titulo:'blabla', partitura:[A#5,B7]}, 
+}}";
