@@ -1,0 +1,9 @@
+{musica:{
+titulo:"miau",
+partitura: [A4,C4]
+},
+
+{titulo:'blabla', partitura:[A#5,B7]}, 
+{titulo:'blabla', partitura:[A#5,B7]}, 
+{titulo:'blabla', partitura:[A#5,B7]}, 
+}
