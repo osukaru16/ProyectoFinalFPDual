@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+
+	<div id="selectorArea">
+	
+	</div>
+</body>
+<script type="text/javascript">
+	
+	window.onload = function() {
+	    //$.ajax({url: "json/pruebaString.json", success: function(musicasString){
+	    //$.getJSON( "json/musica.json", function( jsonObject ) {
+	    //$(document).ready(function(){	
+	   	$.ajax({url:"json/musicasStringJson", success: function( jsonString ) {
+	        //$("#div1").html(result);
+	        var musicasJson = jQuery.parseJSON(jsonString);
+	        alert(musicasString);
+	        console.log(musicasJson);
+
+	        //console.log(jsonObject);
+	    }});
+
+	}
+
+</script>
+</html>

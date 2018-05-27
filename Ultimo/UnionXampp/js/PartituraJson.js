@@ -118,14 +118,27 @@ PartituraJson.prototype.buscaPartitura = function(){
 	}
 
 	//return this.partitura;
-
+	//this.ponComillasArray();
 
 }
 
+/*
+PartituraJson.prototype.ponComillasArray = function(){
+
+	for (var i = 0; i < this.partitura.length; i++){
+
+		//this.partitura[i] = "\""+this.partitura[i]+"\"";
+		this.partitura[i] = '"'+this.partitura[i]+'"';
+
+
+	}
+
+}
+*/
 
 PartituraJson.prototype.creaNuevoStringJson = function(){
 
-	this.nuevoStringJson = "{titulo:"+this.nombreArchivo+"("+this.getTitulo()+"), "+"partitura:["+this.getPartitura()+"]},";
+	this.nuevoStringJson = ", {\"titulo\":\""+this.nombreArchivo+"("+this.getTitulo()+")\", "+"\"partitura\":"+JSON.stringify(this.getPartitura())+"}";
 
 
 }

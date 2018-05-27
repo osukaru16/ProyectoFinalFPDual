@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>MidiConvert</title>
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="js/MidiConvert.js"></script>
 	<script type="text/javascript" src="js/conversorMidiJsonRAW.js"></script>
 	<script type="text/javascript" src="js/PartituraJson.js"></script>
@@ -28,7 +29,9 @@
 
 	<button onclick="stopNote();" id="stopNote"> Stop </button>
 
-	<button onclick="reiniciar();" id="stopNote"> Reiniciar </button>
+	<button onclick="reiniciar();" id="reiniciar"> Reiniciar </button>
+
+	<button onclick="subirPartituraJson();" id="subirPartitura"> Subir Partitura </button>
 
 	<div id="notaSonando"></div>
 
@@ -40,6 +43,8 @@
 		
 		document.getElementById("musicBox").disabled = true;
 		document.getElementById("stopNote").disabled = true;
+		document.getElementById("reiniciar").disabled = true;
+		document.getElementById("subirPartitura").disabled = true;
 	}
 
 		
@@ -53,6 +58,7 @@
 	});
 
 	var partitura;
+	var nuevaPartitura;
 
 	function crearPartituraJson(){
 
@@ -95,9 +101,13 @@
 
 		document.getElementById("musicBox").disabled = false;
 		document.getElementById("stopNote").disabled = false;
+		document.getElementById("reiniciar").disabled = false;
+		document.getElementById("subirPartitura").disabled = false;
 
 
 		//alert(partituraJson.getNuevoStringJson());
+
+		//var musica = JSON.parse(partituraJson.getNuevoStringJson());
 
 		document.querySelector("#ResultsText2").value = partituraJson.getNuevoStringJson();
 
@@ -105,17 +115,65 @@
 		
 
 
-
+		nuevaPartitura = partituraJson.getNuevoStringJson()
 
 
 		//document.querySelector("#ResultsText2").value = document.querySelector("#ResultsText").value;
+		//var parte1 = "{titulo:"+nombreArchivo+"("+titulo+"),";
 
+		//var parte2 = "partitura:["+partituraJson.getNuevoStringJson()+"]},";
+
+		//$.post( "escribirJSON.php", { parte1: parte1.trim()});
+		//$.post( "escribirJSON.php", { parte2: parte2.trim()});
+
+		//$.post( "escribirJSON.php", { partitura: nuevaPartitura.trim()});
+
+		//$.post( "escribirJSON.php", { partitura: nuevaPartitura.trim()});
+/*
+		$.ajax({
+ 				type: "POST",
+ 		 		url: "escribirJSON.php",
+ 			 	data: partituraJson.getNuevoStringJson(),
+  				success: success,
+  				dataType: dataType
+		});
+*/
+
+/*
+		var dataString = partituraJson.getNuevoStringJson();
+
+          $.ajax({
+                      type: "POST",
+                      url: "escribirJSON.php",
+                      data: dataString,
+                      success: function() {
+
+                          alert("Ha sido ejecutada la acción.");
+                          alert(data); //recuperando las variables
+
+                      }
+
+                  });
+*/
 
 
 
 
 
 	}
+
+
+
+function subirPartituraJson(){
+	$.post( "escribirJSON.php", { partitura: nuevaPartitura.trim()});
+	alert("Hecho");
+
+}
+
+
+
+
+
 
 
 
