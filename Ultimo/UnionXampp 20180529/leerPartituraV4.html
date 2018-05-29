@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/lectorParituras.js"></script>
+	<script type="text/javascript" src="js/Frecuencias.js"></script>
+	<script type="text/javascript" src="js/musicBoxRefinado.js"></script>
+
+</head>
+<style type="text/css">
+	
+
+
+
+
+
+
+
+
+#visorPartitura{
+	width: 100px;
+	height: 100px;
+
+	font-size: 80px;
+
+	
+}
+
+
+</style>
+<body>
+
+	<div id="selectorArea"></div>
+
+	<button id="botonStart" onclick='comenzarPractica()'>Comenzar Pactica</button>
+	
+
+	<div id="visorPartitura"></div>
+
+	<button id="siguienteNota" onclick='tocarSiguienteNota()'> Siguiente Nota</button>
+
+	<button  onclick='stopNote()'> Stop</button>
+
+
+
+
+</body>
+<script type="text/javascript">
+	
+	window.onload = function() {
+
+
+	   creaSelectorJson("#selectorArea");
+	   //pintaNota("#visorPartitura");
+	   document.getElementById("botonStart").disabled = true;
+	   document.getElementById("siguienteNota").disabled = true;
+
+	 
+	   
+	 
+	}
+	
+/*
+
+	selectorObject.onchange = function(){
+
+		//pintaNota("#visorPartitura");
+		//partituraSelecionada();
+		document.getElementById("botonStart").disabled = false;
+	}
+*/
+/*
+var selectorObject = $('#partituras');
+
+
+selectorObject.on('change', doSomething);
+
+
+function doSomething(){
+
+	alert("Miau");
+}
+
+*/
+
+
+
+	window.onchange = function(){
+		var numeroPartitura = document.getElementById('partituras').value;
+
+ 		if (numeroPartitura != 0) {
+		//pintaNota("#visorPartitura");
+		//partituraSelecionada();
+			document.getElementById("botonStart").disabled = false;
+		}else{
+			document.getElementById("botonStart").disabled = true;
+			document.getElementById("siguienteNota").disabled = true;
+
+			$("#visorPartitura").html("");
+
+		}
+		
+	}
+	
+
+	//$(document).ready(function() {
+		//creaSelectorJson("#selectorArea");
+		/*
+		$("#partituras").change(function(){
+
+			//pintaNota("#visorPartitura");
+			document.getElementById("botonStart").disabled = false;
+
+		});*/
+
+
+	//});
+
+
+/*
+	function selecionMusica(){
+
+		pintaNota("#visorPartitura");
+
+	}
+
+*/
+//playNote(extraerFrecuencia(
+
+	function comenzarPractica(){
+		//var notaActual = document.getElementById("notaActual").innerText;
+
+
+
+		iniciarAudioContext();
+		pintaNota("#visorPartitura");
+		document.getElementById("siguienteNota").disabled = false;
+
+		tocaNotaActual();
+
+		//alert(document.getElementById("notaActual").innerText);
+
+
+
+	}
+
+
+
+
+	function tocarSiguienteNota(){
+		//var notaActual = document.getElementById("notaActual").innerText;
+
+
+		pintaSiguienteNota("#visorPartitura");
+		tocaNotaActual();
+	
+
+	}
+
+
+
+
+
+
+
+
+
+
+</script>
+</html>
