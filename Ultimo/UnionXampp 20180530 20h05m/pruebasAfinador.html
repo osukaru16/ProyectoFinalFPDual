@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1"> 
+	<title></title>
+
+</head>
+<body>
+	<button onclick="iniciar()">iniciar</button>
+	<button onclick="test2()">afinador</button>
+
+	<div id="afinador"></div>
+
+</body>
+<script src="js/AfinadorCromatico.js"></script>
+<script type="text/javascript">
+	
+	var afinador = null;
+	var nota;
+
+	window.onload = function(){
+
+		afinador = new AfinadorCromatico();
+
+	}
+
+	function iniciar(){
+
+		afinador.iniciarAfinador();
+		//nota = afinador.getNota();
+	}
+
+	function test2(){
+		//afinador.iniciarAfinador();
+		document.getElementById("afinador").innerHTML = afinador.getNota();
+	}
+
+
+
+
+
+</script>
+</html>

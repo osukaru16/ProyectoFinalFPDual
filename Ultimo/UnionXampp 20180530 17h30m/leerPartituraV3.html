@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+
+	<div id="selectorArea">
+	
+	</div>
+</body>
+<script type="text/javascript">
+
+	var jsonObject = null;
+	
+	window.onload = function() {
+	    //$.ajax({url: "json/pruebaString.json", success: function(musicasString){
+	    //$.getJSON( "json/musica.json", function( jsonObject ) {
+	   	$.ajax({url:"json/musicasStringJson", success: function( jsonText ) {
+	   	//$.ajax({url:"json/musicas.json.txt", success: function( jsonText ) {
+	        //$("#div1").html(result);
+	        /*var musicasJson = jQuery.parseJSON(musicasString);
+	        alert(musicasString);
+	        console.log(musicasJson);*/
+	        //.json.txt
+
+	        var newJsonString = jsonText.substring(1, jsonText.length -1);
+	        //alert(newJsonString);
+	        //console.log(newJsonString);
+	        //$("#selectorArea").text(newJsonString);
+
+	        jsonObject = JSON.parse(newJsonString);
+
+
+	        creaSelect("#selectorArea");
+
+
+	        console.log(jsonObject);
+	    }});
+	}
+
+
+	function creaSelect(idDiv){
+
+		$(idDiv).html(function(){
+
+			var textHtml = "";
+			var musicas = jsonObject.musicas;
+
+
+			textHtml = "<select>";
+			for (var i = 1; i < musicas.length; i++) {
+				textHtml += "<option value="+i+">"+musicas[i].titulo+"</option>";
+			}
+			textHtml += "</select>";
+
+			return textHtml;
+
+		});
+
+
+	}
+
+
+
+
+
+
+
+</script>
+</html>
