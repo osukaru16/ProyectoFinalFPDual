@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MidiConvert</title>
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/MidiConvert.js"></script>
+	<script type="text/javascript" src="js/conversorMidiJsonRAW.js"></script>
+	<script type="text/javascript" src="js/PartituraJson.js"></script>
+	<script type="text/javascript" src="js/Frecuencias.js"></script>
+	<script type="text/javascript" src="js/musicBox.js"></script>
+	
+</head>
+<body>
+
+
+	<input id="midiNuevo" type="file" accept="audio/midi">
+
+	<div id="Results">
+		<textarea id="ResultsText"></textarea>-
+
+		<textarea id="ResultsText2"></textarea>-
+
+
+	</div>
+
+	<button onclick="crearPartituraJson();"> ConvertirStringMidi </button>
+
+	<button onclick="musicBox(partitura);"  id="musicBox"> Caja de musica </button>
+
+	<button onclick="stopNote();" id="stopNote"> Stop </button>
+
+	<button onclick="reiniciar();" id="reiniciar"> Reiniciar </button>
+
+	<button onclick="subirPartituraJson();" id="subirPartitura"> Subir Partitura </button>
+
+	<div id="notaSonando"></div>
+
+	
+	<script type="text/javascript">
+	//var audioContext;
+
+	window.onload = function(){
+		
+		document.getElementById("musicBox").disabled = true;
+		document.getElementById("stopNote").disabled = true;
+		document.getElementById("reiniciar").disabled = true;
+		document.getElementById("subirPartitura").disabled = true;
+	}
+
+		
+
+
+	document.querySelector("#midiNuevo").addEventListener("change", function(e){
+
+		cogerMidi(e, "#ResultsText");
+
+		
+	});
+
+	var partitura;
+	var nuevaPartitura;
+
+	function crearPartituraJson(){
+
+		var archvoJsonRaw = document.querySelector("#ResultsText").value;
+
+		var partituraJson = new PartituraJson(archvoJsonRaw, nombreArchivo);
+
+		//document.querySelector("#ResultsText2").value = partituraJson.getJsonRaw();
+
+		// keys del raw header,startTime,duration,tracks
+
+		//alert(Object.keys(partituraJson.jsonParse()));
+
+		//var rawJson = partituraJson.getJsonRaw();
+/*
+		// keys de la keys tracks: startTime,duration,length,notes,controlChanges,id,name
+
+		//alert(Object.keys(rawJson.tracks[0]));
+
+
+		//alert(rawJson.tracks[0].name);   // titulo de la partitura
+
+
+		//alert(rawJson.tracks[1].notes[0]); asi es como se accede a las notas 
+		solo hace falta poner la key name pasa sacar la nota.
+
+*/
+
+		//alert(rawJson.tracks[1].notes[0].name);
+
+		//alert(partituraJson.creaPartitura()[0];
+		//var partitura = partituraJson.creaPartitura();
+
+		partitura = partituraJson.getPartitura();
+
+		var titulo = partituraJson.getTitulo();
+		//alert(partitura[0]);
+
+		//document.querySelector("#ResultsText2").value = nombreArchivo+"("+titulo+")"+"  "+partitura;
+
+		document.getElementById("musicBox").disabled = false;
+		document.getElementById("stopNote").disabled = false;
+		document.getElementById("reiniciar").disabled = false;
+		document.getElementById("subirPartitura").disabled = false;
+
+
+		//alert(partituraJson.getNuevoStringJson());
+
+		//var musica = JSON.parse(partituraJson.getNuevoStringJson());
+
+		document.querySelector("#ResultsText2").value = partituraJson.getNuevoStringJson();
+
+		iniciarAudioContext();
+		
+
+
+		nuevaPartitura = partituraJson.getNuevoStringJson()
+
+
+		//document.querySelector("#ResultsText2").value = document.querySelector("#ResultsText").value;
+		//var parte1 = "{titulo:"+nombreArchivo+"("+titulo+"),";
+
+		//var parte2 = "partitura:["+partituraJson.getNuevoStringJson()+"]},";
+
+		//$.post( "escribirJSON.php", { parte1: parte1.trim()});
+		//$.post( "escribirJSON.php", { parte2: parte2.trim()});
+
+		//$.post( "escribirJSON.php", { partitura: nuevaPartitura.trim()});
+
+		//$.post( "escribirJSON.php", { partitura: nuevaPartitura.trim()});
+/*
+		$.ajax({
+ 				type: "POST",
+ 		 		url: "escribirJSON.php",
+ 			 	data: partituraJson.getNuevoStringJson(),
+  				success: success,
+  				dataType: dataType
+		});
+*/
+
+/*
+		var dataString = partituraJson.getNuevoStringJson();
+
+          $.ajax({
+                      type: "POST",
+                      url: "escribirJSON.php",
+                      data: dataString,
+                      success: function() {
+
+                          alert("Ha sido ejecutada la acción.");
+                          alert(data); //recuperando las variables
+
+                      }
+
+                  });
+*/
+
+
+
+
+
+	}
+
+
+
+function subirPartituraJson(){
+	$.post( "escribirJSON.php", { partitura: nuevaPartitura.trim()});
+	alert("Hecho");
+
+}
+
+
+
+
+
+
+
+
+
+/*
+var peine = 0;
+var frecuencias;
+var osc = null;
+
+	function musicBox(){
+		frecuencias = new Frecuencias();
+
+		playNote(extraerFrecuencia(partitura[peine]));
+		peine++;
+
+		//console.log(frecuencias.getArrayNotaFrecuenciaTono());
+
+		//alert(extraerFrecuencia("G#3"));
+
+
+
+	}
+
+
+function reiniciar(){
+	peine = 0;
+}
+
+
+function extraerFrecuencia(notaTono){
+
+	var nota;
+	var tono;
+
+	var arrayNotaFrecuenciaTono = frecuencias.getArrayNotaFrecuenciaTono();
+
+	if (notaTono.length == 3) {
+		nota = notaTono.charAt(0)+notaTono.charAt(1);
+		tono = notaTono.charAt(2);
+	}else if(notaTono.length == 2) {
+		nota = notaTono.charAt(0);
+		tono = notaTono.charAt(1);
+	}
+
+	for (var i = 0; i < arrayNotaFrecuenciaTono.length; i++) {
+		if((arrayNotaFrecuenciaTono[i][0] == nota)&&(arrayNotaFrecuenciaTono[i][2] == tono)){
+			return arrayNotaFrecuenciaTono[i][1];
+		}
+	}
+	//alert(nota);
+
+}
+
+
+
+window.playNote = function playNote(freq){
+		stopNote();
+		osc = audioContext.createOscillator();
+		osc.connect(audioContext.destination);
+		osc.frequency.value = freq;
+		osc.start(0);
+	};
+
+window.stopNote = function stopNote(){
+		if(osc) {
+			osc.stop();
+			osc.disconnect();
+			osc = null;
+		}
+	};
+
+
+
+
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+
+	<div id="selectorArea">
+	
+	</div>
+</body>
+<script type="text/javascript">
+	
+	window.onload = function() {
+	    //$.ajax({url: "json/pruebaString.json", success: function(musicasString){
+	    //$.getJSON( "json/musica.json", function( jsonObject ) {
+	   	$.ajax({url:"json/pruebaString", success: function( jsonText ) {
+	   	//$.ajax({url:"json/musicas.json.txt", success: function( jsonText ) {
+	        //$("#div1").html(result);
+	        /*var musicasJson = jQuery.parseJSON(musicasString);
+	        alert(musicasString);
+	        console.log(musicasJson);*/
+	        //.json.txt
+
+	        var newJsonString = jsonText.substring(1, jsonText.length -1);
+	        alert(newJsonString);
+	        $("#selectorArea").text(newJsonString);
+
+	        var jsonObject = JSON.parse(newJsonString);
+	        console.log(jsonObject);
+	    }});
+	}
+
+</script>
+</html>
