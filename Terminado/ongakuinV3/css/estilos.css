@@ -1,0 +1,164 @@
+
+body{
+
+	background-color: #272822;
+	color: blue;
+}
+
+
+.visorNotas{
+/*
+	
+  width: 150px;
+  
+  height: 150px;
+
+
+  font-size: 7em;
+
+  */
+
+  background-color: #bfbfbf;
+
+  text-shadow: 2px 2px black;
+
+
+  text-align: center;
+
+  float: right;
+	
+}
+
+
+
+#visorPartitura{
+
+ 
+  width: 300px;
+  
+  height: 150px;
+
+  font-size: 8em;
+
+  
+
+
+}
+
+
+
+#visorAfinador{
+
+  width: 300px;
+  
+  height: 100px;
+
+  font-size: 5em;
+
+
+
+}
+
+
+
+
+
+#partituras {
+   border: 0;
+   color: #EEE;
+   background-color: green;
+   font-size: 20px;
+   font-weight: bold;
+   padding: 2px 10px;
+   width: 378px;
+   
+}
+
+
+
+
+
+
+
+
+#modificadorOctavas{
+
+	/*font-size: 40px;*/
+
+  /*font-size: 2.4em;*/
+
+  /*2.4em*/
+
+  font-size: 5em;
+	color: orange;
+}
+
+
+
+
+#modificadorOctavas{
+
+  text-align: center;  
+}
+
+
+
+
+/*    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;*/
+
+
+
+
+
+/*
+.botonesOctavas{
+
+  float: left;
+  display: block;
+
+
+
+}
+*/
+
+.zonaOctavas{
+
+
+  margin-top: 20%;
+}
+
+
+
+
+
+
+
+.enlaceBoton {    
+
+	padding: 4px 25px;
+  background: rgb(19, 143, 247);
+  border: 1px solid #1161B0;
+  color: #fff;
+  border-radius: 4px;
+  text-decoration:none; 
+
+
+
+
+} 
+.enlaceBoton:link, 
+.enlaceBoton:visited { 
+   border-top: 1px solid #cccccc; 
+   border-bottom: 2px solid #666666; 
+   border-left: 1px solid #cccccc; 
+   border-right: 2px solid #666666; 
+} 
+.enlaceBoton:hover { 
+    border-bottom: 1px solid #cccccc; 
+   border-top: 2px solid #666666; 
+   border-right: 1px solid #cccccc; 
+   border-left: 2px solid #666666; 
+}

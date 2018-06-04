@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/estilos.css" />
+
+
+
+
+
+
+
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/lectorParituras.js"></script>
+	<script type="text/javascript" src="js/Frecuencias.js"></script>
+	<script type="text/javascript" src="js/musicBox.js"></script>
+	<script type="text/javascript" src="js/afinadorCromatico.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+
+
+</head>
+
+<body>
+
+<div class="container">
+
+
+	<div class="row">
+
+		<div class="col-sm-6">
+
+			<a class="enlaceBoton" href="subir_midi.html">Subir archivos midi</a>
+
+			<div id="selectorArea"></div>
+
+			<button id="botonStart" class="btn-success" onclick='comenzarPractica()'>Comenzar Pactica</button>
+
+			<button id="botonReiniciar" onclick='reiniciaMusica()'>Reiniciar Partitura</button>
+
+			<button id="botonAfinador" onclick='iniciarAfinador(true)'>Afinador Cromatico</button>
+			
+			<div id="notasTocadas"></div>
+
+			<div id="visorPartitura" class="visorNotas"></div>
+
+			<div id="visorAfinador" class="visorNotas"></div>
+
+			<button id="inicioSonido" onclick='iniciarMusicBox()'>Tocar nota</button>
+
+			<button id="siguienteNota" onclick='tocarSiguienteNota()'> Siguiente Nota</button>
+
+			<button  onclick='stopNotas()'> Stop</button>
+
+		</div>
+
+
+		<div class="col-sm-6 zonaOctavas">
+
+			<div class="row">
+
+
+				<div class="col-sm-6">
+					<div id="modificadorOctavas"></div>
+				</div>
+
+				<div class="col-sm-6">
+
+					<button id="botonSubeOctava" class="botonesOctavas" onclick='subeOctava()'> + Subir Octaba</button>
+
+					<button id="botonBajaOctava" class="botonesOctavas" onclick='bajaOctava()'> - Bajar Octaba</button>
+
+					<button  id="botonReiniciaOctava" class="botonesOctavas" onclick='reiniciaOctava()'> Reiniciar Octaba</button>
+
+				</div>
+
+			
+
+			</div>
+
+		</div>
+
+
+	</div>
+
+
+</div>
+
+</body>
+
+</html>
