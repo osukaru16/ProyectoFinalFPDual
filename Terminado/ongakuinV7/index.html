@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/estilos.css" />
+
+
+
+
+
+
+
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/lectorPartituras.js"></script>
+	<script type="text/javascript" src="js/Frecuencias.js"></script>
+	<script type="text/javascript" src="js/musicBox.js"></script>
+	<script type="text/javascript" src="js/afinadorCromatico.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+
+
+</head>
+
+<body>
+
+<div class="container contenedor">
+
+
+	<div class="row">
+
+		<div class="col-sm-6">
+
+			<div id="selectorArea"></div>
+
+			<div id="notasTocadas">Notas tocadas: </div>
+
+			<div class="row">
+
+				
+				
+
+				<div class="col-sm-12 visores">
+
+					
+
+					<div id="visorPartitura" class="visorNotas"></div>
+					<div id="visorAfinador" class="visorNotas"></div>
+
+				</div>
+
+				
+
+				
+			</div>
+
+
+			<div class="row">
+
+				<div class="col-sm-12">
+
+					<button id="botonStart" class="btn-success" onclick='comenzarPractica()'>Comenzar Pactica</button>
+										
+
+				</div>
+
+			</div>
+
+
+			<div class="row">
+
+				<div class="col-sm-12">
+					<button id="botonFacil" class="botonesColumna modofacil" onclick='modoFacilAccion()'> Modo Fácil (Activar para instrumentos de arco)</button>
+				</div>
+			</div>
+
+
+		</div>
+
+
+		<div class="col-sm-6 ">
+
+			
+			<div><a class="enlaceBoton subir" href="subir_midi.html">Subir archivos midi</a></div>
+
+			
+
+
+			<div class="row zonaOctavas">
+
+				
+
+				<div class="col-sm-4">
+					<div id="modificadorOctavas"></div>
+				</div>
+
+				<div class="col-sm-4">
+
+					<button id="botonSubeOctava" class="botonesColumna" onclick='subeOctava()'> + Subir Octaba</button>
+
+					<button  id="botonReiniciaOctava" class="botonesColumna" onclick='reiniciaOctava()'> Reiniciar Octaba</button>
+
+					<button id="botonBajaOctava" class="botonesColumna" onclick='bajaOctava()'> - Bajar Octaba</button>
+
+					<button class="botonesColumna" onclick='alert("Notas: A = la, B = si, C = do, D = re, E = mi, F = fa, G = sol");'> Ayuda notas</button>
+
+
+
+				</div>
+
+
+				<div class="col-sm-4">
+
+					<button id="botonReiniciar"  class="botonesColumna" onclick='reiniciaMusica()'>Reiniciar Partitura</button>
+
+					<button id="botonAfinador" class="botonesColumna" onclick='iniciarAfinador(true)'>Afinador Cromatico</button>
+
+					<button id="inicioSonido" class="botonesColumna" onclick='iniciarMusicBox()'>Tocar nota</button>
+		
+					<button id="siguienteNota" class="botonesColumna" onclick='tocarSiguienteNota()'> Siguiente Nota</button>
+		
+					<button  class="botonesColumna" onclick='stopNotas()'> Stop</button>
+
+				</div>
+
+			
+
+			</div>
+
+		</div>
+
+
+	</div>
+
+	
+
+
+
+
+</div>
+
+</body>
+
+</html>

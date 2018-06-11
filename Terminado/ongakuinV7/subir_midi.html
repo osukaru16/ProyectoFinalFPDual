@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MidiConvert</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/estilos.css" />
+
+
+
+
+
+
+
+
+
+
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/MidiConvert.js"></script>
+	<script type="text/javascript" src="js/conversorMidiJsonRAW.js"></script>
+	<script type="text/javascript" src="js/PartituraJson.js"></script>
+	<script type="text/javascript" src="js/Frecuencias.js"></script>
+	<script type="text/javascript" src="js/musicBox.js"></script>
+	
+	
+	
+</head>
+<body>
+
+<div class="container">
+
+
+	<div class="row">
+		<div class="col-sm-6">
+
+			<div class="row ladoIzquirdo">
+				<div class="col-sm-6">
+
+					<a class="enlaceBoton" href="index.html">INICIO</a>
+
+				</div>
+
+				
+
+			</div>
+
+			
+
+			<div class="row ladoIzquirdo">
+
+				
+
+					<div class="col-sm-6">
+						<textarea id="ResultsText" class="ResultsTextArea" disabled></textarea>-
+					</div>
+
+					<div class="col-sm-6">
+						<textarea id="ResultsText2" class="ResultsTextArea" disabled></textarea>-
+					</div>
+
+				
+
+			</div>
+
+
+
+			<div class="row ladoIzquirdo">
+
+				<div class="col-sm-6">
+					<input id="midiNuevo" type="file" accept="audio/midi">
+				</div>
+
+			</div>
+
+
+
+
+
+
+
+
+
+
+		</div>
+	
+		
+
+
+	
+
+		<div class="col-sm-6">
+
+			<div class="row">
+
+				<div class="col-sm-6">
+
+					<button onclick="crearPartituraJson();" class="botonesColumna"> ConvertirStringMidi </button>
+
+					<button onclick="musicBox(partitura);"  class="botonesColumna" id="musicBox"> Caja de musica </button>
+
+					<button onclick="stopNote();" id="stopNote" class="botonesColumna"> Stop </button>
+
+					<button onclick="reiniciar();" class="botonesColumna" id="reiniciar"> Reiniciar </button>
+
+				</div>
+				<div class="col-sm-6">
+
+					<button onclick="subirPartituraJson();" class="btn btn-warning botonesColumna" id="subirPartitura"> Subir Partitura </button>
+
+				</div>
+
+				<div id="notaSonando"></div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+	
+	<script type="text/javascript">
+	
+
+	window.onload = function(){
+		
+		document.getElementById("musicBox").disabled = true;
+		document.getElementById("stopNote").disabled = true;
+		document.getElementById("reiniciar").disabled = true;
+		document.getElementById("subirPartitura").disabled = true;
+	}
+
+		
+
+
+	document.querySelector("#midiNuevo").addEventListener("change", function(e){
+
+		cogerMidi(e, "#ResultsText");
+
+		
+	});
+
+	var partitura;
+	var nuevaPartitura;
+
+	function crearPartituraJson(){
+
+		var archvoJsonRaw = document.querySelector("#ResultsText").value;
+
+		var partituraJson = new PartituraJson(archvoJsonRaw, nombreArchivo);
+
+		
+
+		partitura = partituraJson.getPartitura();
+
+		var titulo = partituraJson.getTitulo();
+		
+
+		document.getElementById("musicBox").disabled = false;
+		document.getElementById("stopNote").disabled = false;
+		document.getElementById("reiniciar").disabled = false;
+		document.getElementById("subirPartitura").disabled = false;
+
+
+
+		document.querySelector("#ResultsText2").value = partituraJson.getNuevoStringJson();
+
+		iniciarAudioContext();
+		
+
+
+		nuevaPartitura = partituraJson.getNuevoStringJson()
+
+
+
+
+	}
+
+
+
+function subirPartituraJson(){
+
+/*
+
+	Nota: al mejorar el proyecto hay que repasar esta parte.
+
+
+*/
+
+
+	$.post( "escribirJSON.php", { partitura: nuevaPartitura.trim()});
+	alert("Hecho");
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+
+</body>
+</html>
